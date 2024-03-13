@@ -1,0 +1,15 @@
+@use "./section.scss";
+@use "./nav.scss";
+
+body {
+  margin: 0;
+}
+header {
+  width: 100vw;
+  height: 10vh;
+}
+article {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}

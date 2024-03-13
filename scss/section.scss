@@ -1,0 +1,13 @@
+@use "./partials/mixins";
+@use "./partials/variables";
+
+.sections {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  scroll-margin-top: 10vh;
+
+  &--background {
+    background-color: red;
+  }
+}
