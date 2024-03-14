@@ -1,19 +1,51 @@
+/* SCSS HEX */
 .sections {
   display: flex;
   height: 100vh;
   width: 100%;
   scroll-margin-top: 10vh;
+  flex-direction: column;
+  justify-content: center;
 }
-.sections--background {
-  background-color: red;
+.sections_heading {
+  font-size: 30px;
+}
+.sections_text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+}
+.sections_text--whiteText {
+  color: rgb(211, 211, 211);
+}
+.sections_img {
+  background-image: url("../assets/leaves.jpg");
+  background-size: cover;
+}
+.sections_background--blue {
+  background-color: #102542;
+}
+.sections_background--gray {
+  background-color: #8d8d92;
+}
+.sections_background--lightblue {
+  background-color: #c5fffd;
+}
+.sections_background--beige {
+  background-color: #dce0bb;
+}
+.sections_background--green {
+  background-color: rgb(58, 104, 77);
+}
+.sections--whiteText {
+  color: rgb(211, 211, 211);
 }
 
 .nav {
-  width: 100%;
+  width: 100vh;
   height: 10vh;
   position: fixed;
   display: flex;
-  background-color: rgb(104, 133, 207);
+  background-color: rgb(58, 104, 77);
 }
 .nav_links {
   display: flex;
@@ -21,14 +53,21 @@
   align-items: flex-end;
   justify-content: flex-end;
   gap: 5px;
+  width: 100vw;
 }
 .nav_text {
-  color: black;
+  color: lightgray;
   font-size: 20px;
   text-decoration: none;
 }
 .nav_text:hover {
   text-decoration: underline;
+}
+.nav_text:visited {
+  text-decoration: none;
+}
+.nav--border {
+  border-bottom: 3px solid black;
 }
 
 body {
