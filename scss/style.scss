@@ -1,11 +1,15 @@
 @use "./section.scss";
 @use "./nav.scss";
+@use "./gallery.scss";
+@use "./footer.scss";
+@use "./partials/mixins.scss";
 
 body {
   margin: 0;
+  width: 100%;
 }
 header {
-  width: 100vw;
+  width: 100%;
   height: 10vh;
 }
 article {

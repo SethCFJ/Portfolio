@@ -1,0 +1,54 @@
+@use "./partials/variables" as v;
+i:hover {
+  text-decoration: none;
+}
+.gallery {
+  width: 80%;
+  height: 20%;
+  display: flex;
+  justify-content: space-around;
+  align-self: center;
+  border: 3px solid black;
+  border-radius: 10px;
+  margin-top: 7vh;
+  padding: 2vh;
+  gap: 5px;
+  box-shadow: 3px 3px 5px #8d8d92ff;
+
+  &_heading {
+    font-family: v.$customFont;
+  }
+  &_img {
+    height: 100%;
+    width: 100%;
+    align-self: flex-start;
+
+    object-fit: contain;
+
+    &_container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 25%;
+    }
+  }
+  &_text {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    align-self: flex-end;
+    justify-self: flex-end;
+  }
+
+  &--border {
+    border: 1px solid black;
+  }
+  &--shadow {
+    box-shadow: -3px 10px 45px -7px rgba(0, 0, 0, 0.68);
+  }
+  &--alignRight {
+    align-items: flex-end;
+  }
+  &:hover {
+    box-shadow: 3px 3px 3px black;
+  }
+}

@@ -1,26 +1,52 @@
-@use "./partials/mixins";
 @use "./partials/variables";
-
+@use "./gallery.scss";
+@use "../scss/partials/mixins.scss";
+@use "./list.scss";
 .sections {
   display: flex;
-  height: 100vh;
-  width: 100%;
-  scroll-margin-top: 10vh;
+  height: 90vh;
+  width: 100vw;
+  scroll-margin-top: 6vh;
+  padding-bottom: 10vh;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 
   &_heading {
-    font-size: 30px;
+    @extend .sections;
+    font-size: 50px;
+    font-family: variables.$customFont;
+    justify-self: flex-end;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    height: 10vh;
+    width: 100%;
+    padding-bottom: 0;
+    text-align: center;
   }
+  &_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+    width: 90%;
 
-  &_text {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 30px;
-    &--whiteText {
-      color: rgb(211, 211, 211);
+    gap: 5vw;
+    @include mixins.text;
+    &_img {
+      width: 40%;
+      aspect-ratio: 1/1;
+
+      box-shadow: 4px 4px 4px black;
     }
   }
-
+  &_text {
+    font-family: variables.$customFont;
+    font-size: 22px;
+    justify-self: center;
+    align-self: center;
+  }
   &_img {
     background-image: url("../assets/leaves.jpg");
     background-size: cover;
@@ -44,5 +70,12 @@
   }
   &--whiteText {
     color: rgb(211, 211, 211);
+  }
+
+  &--blackShadow {
+    text-shadow: 2px 2px black;
+  }
+  &--alignTopLeft {
+    align-self: flex-start;
   }
 }

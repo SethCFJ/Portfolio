@@ -6,6 +6,17 @@
     <title>Seth Fordham</title>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./scss/style.scss" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Madimi+One&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/6e360047f6.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header>
@@ -15,63 +26,133 @@
           <a href="#aboutSection" class="nav_text">About</a>
           <a href="#projectSection" class="nav_text">Projects</a>
           <a href="#skillSection" class="nav_text">Skills</a>
-          <a href="#contactSection" class="nav_text">Contact</a>
         </div>
       </nav>
     </header>
     <main>
+      <!-- landing section -->
       <article>
         <section class="sections sections_img" id="landingSection">
-          <h1 class="sections sections_heading sections--whiteText">
-            <span>Hi I'm</span> Seth Fordham
+          <h1
+            class="sections_heading sections--whiteText sections--blackShadow"
+          >
+            Hi, I'm Seth
           </h1>
-          <p class="sections sections_text--whiteText">
-            I'm a software engineer specialising in HTML, CSS and SCSS.
+          <p class="sections_text sections--whiteText sections--blackShadow">
+            Junior Developer
           </p>
         </section>
+        <!-- about section -->
         <section class="sections sections_background--gray" id="aboutSection">
           <h1 class="sections_heading">About</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam,
-            commodi quas modi amet illo quos tenetur dicta. Labore voluptate
-            provident beatae numquam ratione, quo consectetur atque perspiciatis
-            mollitia dolore fugit!
-          </p>
+          <div class="sections_container">
+            <img
+              class="sections_container_img"
+              src="./assets/1NH_33861.JPG"
+              alt="Picture of Me"
+            />
+            <p class="container_text">
+              My name is Seth and I'm currently training to become a junior
+              software developer. Based in Sydney, I enjoy solving problems
+              through coding and am enthusiastic about all things tech related.
+              <br />
+              <br />
+              When I'm not working you can find me refurbishing and modding old
+              consoles, playing basketball and making a mess in the kitchen.
+            </p>
+          </div>
         </section>
+        <!-- project section -->
         <section
           class="sections sections_background--lightblue"
           id="projectSection"
         >
-          <h1 class="sections_heading">Projects</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-            atque reprehenderit numquam commodi ipsam quaerat. Ex, blanditiis id
-            laborum culpa debitis nihil vero, sit laboriosam quibusdam animi
-            fugit error illum!
-          </p>
+          <h1 class="sections_heading sections--alignTopRight">Projects</h1>
+          <!-- project gallery -->
+          <div class="gallery">
+            <div class="gallery_img_container">
+              <img
+                class="gallery_img"
+                src="http://placekitten.com/g/300/300"
+                alt="kitten photo"
+              />
+            </div>
+
+            <p class="gallery_text">
+              Placeholder for project #1
+              <a href="https://github.com/SethCFJ/my-test-repo"
+                ><i class="fa-brands fa-github fa-2xl fa-bounce"></i
+              ></a>
+            </p>
+          </div>
+          <div class="gallery">
+            <div class="gallery_img_container">
+              <img
+                class="gallery_img"
+                src="http://placekitten.com/g/300/300"
+                alt="kitten photo"
+              />
+            </div>
+
+            <p class="gallery_text">
+              Placeholder for project #2
+              <i class="fa-brands fa-github fa-2xl"></i>
+            </p>
+          </div>
+          <div class="gallery">
+            <div class="gallery_img_container">
+              <img
+                class="gallery_img"
+                src="http://placekitten.com/g/300/300"
+                alt="kitten photo"
+              />
+            </div>
+
+            <p class="gallery_text">
+              Placeholder for project #3
+              <i class="fa-brands fa-github fa-2xl"></i>
+            </p>
+          </div>
         </section>
+        <!-- skills section -->
         <section class="sections sections_background--beige" id="skillSection">
           <h1 class="sections_heading">Skills</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
-            quidem eligendi hic voluptates facilis quasi consectetur laudantium,
-            nobis aspernatur harum, qui corrupti, maxime minus asperiores
-            nostrum doloribus tempora reprehenderit excepturi?
-          </p>
-        </section>
-        <section
-          class="sections sections_background--green"
-          id="contactSection"
-        >
-          <h1 class="sections_heading">Contact</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-            vero tempore corporis doloribus distinctio eum commodi earum eveniet
-            neque, quos aliquam dolore aperiam veniam rerum est cum dolorem!
-            Quos, pariatur!
-          </p>
+          <ul class="list">
+            <li class="list_items">
+              <i class="fa-brands fa-html5 fa-2xl"></i> HTML5
+            </li>
+            <li class="list_items">
+              CSS3
+              <i class="fa-brands fa-css3-alt fa-2xl"></i>
+            </li>
+            <li class="list_items">
+              <i class="fa-brands fa-sass fa-2xl"></i> SASS/SCSS
+            </li>
+            <li class="list_items">
+              JavaScript <i class="fa-brands fa-js fa-2xl"></i>
+            </li>
+            <li class="list_items">
+              <i class="fa-brands fa-square-git fa-2xl"></i> git
+            </li>
+          </ul>
         </section>
       </article>
     </main>
+    <footer>
+      <div class="footer">
+        <div class="footer_icons">
+          <a href="https://www.linkedin.com/in/sethfordham/"
+            ><i class="fa-brands fa-linkedin fa-2xl"></i
+          ></a>
+          <a class="footer_links" href="https://github.com/SethCFJ"
+            ><i class="fa-brands fa-github fa-2xl"></i
+          ></a>
+        </div>
+
+        <a class="footer_links" href="mailto:seth_fordham@icloud.com"
+          ><p class="sections_text">seth_fordham@icloud.com</p></a
+        >
+      </div>
+    </footer>
   </body>
 </html>
