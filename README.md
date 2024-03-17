@@ -21,3 +21,7 @@ This is the repository that will be used to showcase all the various projects th
 ## Contact
 
 You can contact me at seth_fordham@icloud.com
+
+## Deployed site 
+
+https://sethcfj.github.io/Portfolio/
