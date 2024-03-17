@@ -4,7 +4,7 @@ Welcome to my portfolio project!
 
 ## Introduction
 
-This is repository will be used to showcase all the various projects that I will work on, highlighting the skills I have learnt in coding.
+This is the repository that will be used to showcase all the various projects that I will work on, highlighting the skills I have learnt in coding.
 
 ## Projects included so far:
 
