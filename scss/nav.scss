@@ -1,58 +1,84 @@
 @use "./partials/variables";
 @use "./partials/queries";
+@use "./section.scss";
 .nav {
-  width: 100vw;
-  height: 10vh;
   position: fixed;
-  display: flex;
-
   background-color: variables.$cal-poly-green;
-  justify-content: center;
   overflow: hidden;
-
-  &_links {
-    display: flex;
-    flex-direction: row;
-    font-family: variables.$navFont;
-    align-items: center;
-    justify-content: space-around;
-    align-content: center;
-
-    gap: 8%;
-  }
-  &_text {
-    color: lightgray;
-    font-size: 22px;
-    text-decoration: none;
-    &:hover {
-      text-decoration: none;
+  border-bottom: 3px solid black;
+  width: 100%;
+  &_responsive {
+    position: fixed;
+    .sections {
+      scroll-margin-top: 0;
     }
-    &:visited {
-      text-decoration: none;
+  }
+  &_icon {
+    display: none;
+    @include queries.phone {
+      display: block;
+      float: right;
+      font-size: 40px;
+    }
+  }
+  &_links {
+    padding: 20px;
+    display: block;
+    font-family: variables.$navFont;
+    text-decoration: none;
+    float: left;
+    color: lightgray;
+    text-align: center;
+    font-size: 22px;
+
+    @include queries.phone {
+      &:not(:first-child) {
+        display: none;
+      }
+    }
+    &:hover {
+      background-color: rgb(66, 138, 66);
     }
     &:active {
-      text-decoration: underline;
+      background-color: rgb(66, 138, 66);
     }
-    //these stop the blue highlight on links when clicking
-    -webkit-tap-highlight-color: transparent;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+
     @include queries.small-tablet {
-      font-size: 30px;
+      font-size: 20px;
+      width: 18%;
+      transition: 0.5s;
+      &:hover {
+        width: 20%;
+      }
     }
     @include queries.tablet {
-      font-size: 50px;
+      font-size: 30px;
+      width: 19%;
+      transition: 0.5s;
+      &:hover {
+        width: 20%;
+      }
     }
     @include queries.laptop {
-      font-size: 70px;
+      font-size: 50px;
+      width: 19%;
+      transition: 0.5s;
+      &:hover {
+        width: 24%;
+      }
     }
   }
 
-  &--border {
-    border-bottom: 3px solid black;
+  &_responsive &_links {
+    float: none;
+    display: block;
+    text-align: left;
+    background-color: variables.$cal-poly-green;
+    width: 100vw;
+  }
+  &_responsive &_icon {
+    position: fixed;
+    right: 0;
+    top: 0;
   }
 }

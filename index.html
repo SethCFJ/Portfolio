@@ -16,20 +16,26 @@
       href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Madimi+One&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <script
       src="https://kit.fontawesome.com/6e360047f6.js"
       crossorigin="anonymous"
     ></script>
+    <script src="script.js"></script>
   </head>
   <body>
     <header>
-      <nav class="nav nav--border">
-        <div class="nav_links">
-          <a href="#landingSection" class="nav_text">Home</a>
-          <a href="#aboutSection" class="nav_text">About</a>
-          <a href="#projectSection" class="nav_text">Projects</a>
-          <a href="#skillSection" class="nav_text">Skills</a>
-        </div>
+      <nav class="nav" id="myNav">
+        <a href="#landingSection" class="nav_links">Home</a>
+        <a href="#aboutSection" class="nav_links">About</a>
+        <a href="#projectSection" class="nav_links">Projects</a>
+        <a href="#skillSection" class="nav_links">Skills</a>
+        <a href="javascript:void(0);" class="nav_icon" onclick="navFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
       </nav>
     </header>
     <main>
