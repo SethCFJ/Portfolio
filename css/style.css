@@ -330,6 +330,7 @@ a {
 
 #landingSection {
   justify-content: center;
+  height: 100vh;
 }
 
 .nav {
@@ -379,11 +380,11 @@ a {
 @media only screen and (min-width: 431px) and (max-width: 768px) {
   .nav_links {
     font-size: 20px;
-    width: 18%;
+    width: 14vw;
     transition: 0.5s;
   }
   .nav_links:hover {
-    width: 20%;
+    width: 17%;
   }
 }
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
