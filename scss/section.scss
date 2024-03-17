@@ -2,27 +2,41 @@
 @use "./gallery.scss";
 @use "../scss/partials/mixins.scss";
 @use "./list.scss";
+@use "./partials/queries";
 .sections {
   display: flex;
   height: 90vh;
-  width: 100vw;
+  width: 100%;
   scroll-margin-top: 6vh;
-  padding-bottom: 10vh;
+  padding-bottom: 5vh;
+  padding-top: 3vh;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-
+  @include queries.small-tablet {
+    width: 100vw;
+  }
   &_heading {
     @extend .sections;
     font-size: 50px;
     font-family: variables.$customFont;
-    justify-self: flex-end;
     margin-top: 30px;
     margin-bottom: 10px;
     height: 10vh;
     width: 100%;
     padding-bottom: 0;
     text-align: center;
+
+    @include queries.small-tablet {
+      font-size: 5em;
+      text-align: center;
+    }
+    @include queries.tablet {
+      font-size: 9em;
+    }
+    @include queries.laptop {
+      font-size: 11em;
+    }
   }
   &_container {
     display: flex;
@@ -33,19 +47,49 @@
     width: 90%;
 
     gap: 5vw;
+    @include queries.tablet {
+      font-size: 36px;
+      flex-direction: row;
+      margin-top: 30px;
+    }
+    @include queries.laptop {
+      flex-direction: row;
+      margin-top: 30px;
+    }
     @include mixins.text;
     &_img {
-      width: 40%;
+      width: 80%;
       aspect-ratio: 1/1;
 
       box-shadow: 4px 4px 4px black;
+      @include queries.small-tablet {
+        width: 50%;
+        margin-top: 30px;
+      }
+      @include queries.tablet {
+        width: 50%;
+      }
+      @include queries.laptop {
+        width: 40%;
+        margin-top: 30px;
+      }
     }
   }
   &_text {
     font-family: variables.$customFont;
-    font-size: 22px;
+
     justify-self: center;
     align-self: center;
+    font-size: 30px;
+    @include queries.small-tablet {
+      font-size: 30px;
+    }
+    @include queries.tablet {
+      font-size: 40px;
+    }
+    @include queries.laptop {
+      font-size: 60px;
+    }
   }
   &_img {
     background-image: url("../assets/leaves.jpg");
@@ -78,4 +122,7 @@
   &--alignTopLeft {
     align-self: flex-start;
   }
+}
+#landingSection {
+  justify-content: center;
 }

@@ -1,5 +1,5 @@
 @use "./partials/variables";
-
+@use "./partials/queries";
 .list {
   display: flex;
   flex-direction: column;
@@ -8,9 +8,24 @@
   gap: 10vh;
   padding: 0;
   flex-wrap: wrap;
+  @include queries.small-tablet {
+    margin-top: 60px;
+  }
+  @include queries.tablet {
+    margin-top: 80px;
+  }
+  @include queries.laptop {
+    margin-top: 70px;
+  }
   &_items {
     list-style: none;
     font-size: 2em;
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    @include queries.tablet {
+      font-size: 3em;
+    }
+    @include queries.laptop {
+      font-size: 3.5em;
+    }
   }
 }

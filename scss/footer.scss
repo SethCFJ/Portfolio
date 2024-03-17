@@ -1,4 +1,6 @@
 @use "./partials/variables" as v;
+@use "./partials/queries";
+
 i {
   color: black;
 }
@@ -17,8 +19,25 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 5%;
+  padding-top: 3vh;
+  &_text {
+    font-family: v.$customFont;
+    font-size: 22px;
+    justify-self: center;
+    align-self: center;
+    margin-bottom: 0;
+    @include queries.small-tablet {
+      font-size: 26px;
+    }
+    @include queries.tablet {
+      font-size: 26px;
+    }
+    @include queries.laptop {
+      font-size: 30px;
+    }
+  }
   &_links {
+    font-size: 20px;
     &:visited {
       color: black;
     }
@@ -26,5 +45,14 @@ footer {
       color: black;
       text-decoration: none;
     }
+  }
+  @include queries.small-tablet {
+    font-size: 26px;
+  }
+  @include queries.tablet {
+    font-size: 30px;
+  }
+  @include queries.laptop {
+    font-size: 30px;
   }
 }

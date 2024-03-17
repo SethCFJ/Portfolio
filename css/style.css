@@ -3,6 +3,26 @@ i:hover {
   text-decoration: none;
 }
 
+a {
+  align-self: center;
+  margin-right: 3px;
+}
+@media only screen and (min-width: 431px) and (max-width: 768px) {
+  a {
+    font-size: 2em;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  a {
+    font-size: 2.5em;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  a {
+    font-size: 3em;
+  }
+}
+
 .gallery {
   width: 80%;
   height: 20%;
@@ -12,9 +32,14 @@ i:hover {
   border: 3px solid black;
   border-radius: 10px;
   margin-top: 7vh;
-  padding: 2vh;
   gap: 5px;
   box-shadow: 3px 3px 5px #8d8d92;
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .gallery {
+    margin-top: 3vh;
+    margin-bottom: 4vh;
+  }
 }
 .gallery_heading {
   font-family: "Madimi One", sans-serif;
@@ -22,20 +47,79 @@ i:hover {
 .gallery_img {
   height: 100%;
   width: 100%;
-  align-self: flex-start;
   object-fit: contain;
 }
 .gallery_img_container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 25%;
+  justify-self: left;
+  align-self: center;
+  height: 90%;
+  width: 50%;
+  margin-left: 3px;
+}
+@media only screen and (min-width: 431px) and (max-width: 768px) {
+  .gallery_img_container {
+    width: 45%;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .gallery_img_container {
+    width: 40%;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .gallery_img_container {
+    width: 35%;
+  }
 }
 .gallery_text {
+  display: flex;
+  flex-direction: column;
+  height: 95%;
+  width: 75%;
+  justify-content: center;
+  align-items: center;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  align-self: flex-end;
-  justify-self: flex-end;
+  gap: 0;
+}
+.gallery_text_header {
+  font-size: 1em;
+  margin: 0;
+  font-size: 20px;
+  text-align: center;
+}
+@media only screen and (min-width: 431px) and (max-width: 768px) {
+  .gallery_text_header {
+    font-size: 1.5em;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .gallery_text_header {
+    font-size: 1.75em;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .gallery_text_header {
+    font-size: 2.25em;
+  }
+}
+.gallery_text_desc {
+  font-size: 0;
+}
+@media only screen and (min-width: 431px) and (max-width: 768px) {
+  .gallery_text_desc {
+    font-size: 0.75em;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .gallery_text_desc {
+    font-size: 1em;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .gallery_text_desc {
+    font-size: 1.5em;
+  }
 }
 .gallery--border {
   border: 1px solid black;
@@ -58,32 +142,78 @@ i:hover {
   padding: 0;
   flex-wrap: wrap;
 }
+@media only screen and (min-width: 431px) and (max-width: 768px) {
+  .list {
+    margin-top: 60px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .list {
+    margin-top: 80px;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .list {
+    margin-top: 70px;
+  }
+}
 .list_items {
   list-style: none;
   font-size: 2em;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .list_items {
+    font-size: 3em;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .list_items {
+    font-size: 3.5em;
+  }
+}
 
 .sections, .sections_heading {
   display: flex;
   height: 90vh;
-  width: 100vw;
+  width: 100%;
   scroll-margin-top: 6vh;
-  padding-bottom: 10vh;
+  padding-bottom: 5vh;
+  padding-top: 3vh;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+}
+@media only screen and (min-width: 431px) and (max-width: 768px) {
+  .sections, .sections_heading {
+    width: 100vw;
+  }
 }
 .sections_heading {
   font-size: 50px;
   font-family: "Madimi One", sans-serif;
-  justify-self: flex-end;
   margin-top: 30px;
   margin-bottom: 10px;
   height: 10vh;
   width: 100%;
   padding-bottom: 0;
   text-align: center;
+}
+@media only screen and (min-width: 431px) and (max-width: 768px) {
+  .sections_heading {
+    font-size: 5em;
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .sections_heading {
+    font-size: 9em;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .sections_heading {
+    font-size: 11em;
+  }
 }
 .sections_container {
   display: flex;
@@ -94,19 +224,79 @@ i:hover {
   width: 90%;
   gap: 5vw;
   font-family: "Madimi One", sans-serif;
-  font-size: 16px;
+  font-size: 1.25em;
   text-align: center;
 }
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .sections_container {
+    font-size: 36px;
+    flex-direction: row;
+    margin-top: 30px;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .sections_container {
+    flex-direction: row;
+    margin-top: 30px;
+  }
+}
+@media only screen and (min-width: 431px) and (max-width: 768px) {
+  .sections_container {
+    font-size: 1.5em;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .sections_container {
+    font-size: 1.75em;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .sections_container {
+    font-size: 2.5em;
+  }
+}
 .sections_container_img {
-  width: 40%;
+  width: 80%;
   aspect-ratio: 1/1;
   box-shadow: 4px 4px 4px black;
 }
+@media only screen and (min-width: 431px) and (max-width: 768px) {
+  .sections_container_img {
+    width: 50%;
+    margin-top: 30px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .sections_container_img {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .sections_container_img {
+    width: 40%;
+    margin-top: 30px;
+  }
+}
 .sections_text {
   font-family: "Madimi One", sans-serif;
-  font-size: 22px;
   justify-self: center;
   align-self: center;
+  font-size: 30px;
+}
+@media only screen and (min-width: 431px) and (max-width: 768px) {
+  .sections_text {
+    font-size: 30px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .sections_text {
+    font-size: 40px;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .sections_text {
+    font-size: 60px;
+  }
 }
 .sections_img {
   background-image: url("../assets/leaves.jpg");
@@ -137,6 +327,10 @@ i:hover {
   align-self: flex-start;
 }
 
+#landingSection {
+  justify-content: center;
+}
+
 .nav {
   width: 100vw;
   height: 10vh;
@@ -149,9 +343,9 @@ i:hover {
 .nav_links {
   display: flex;
   flex-direction: row;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Lato", sans-serif;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   align-content: center;
   gap: 8%;
 }
@@ -175,6 +369,21 @@ i:hover {
 }
 .nav_text:active {
   text-decoration: underline;
+}
+@media only screen and (min-width: 431px) and (max-width: 768px) {
+  .nav_text {
+    font-size: 30px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .nav_text {
+    font-size: 50px;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .nav_text {
+    font-size: 70px;
+  }
 }
 .nav--border {
   border-bottom: 3px solid black;
@@ -200,7 +409,32 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 5%;
+  padding-top: 3vh;
+}
+.footer_text {
+  font-family: "Madimi One", sans-serif;
+  font-size: 22px;
+  justify-self: center;
+  align-self: center;
+  margin-bottom: 0;
+}
+@media only screen and (min-width: 431px) and (max-width: 768px) {
+  .footer_text {
+    font-size: 26px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .footer_text {
+    font-size: 26px;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .footer_text {
+    font-size: 30px;
+  }
+}
+.footer_links {
+  font-size: 20px;
 }
 .footer_links:visited {
   color: black;
@@ -208,6 +442,21 @@ footer {
 .footer_links:link {
   color: black;
   text-decoration: none;
+}
+@media only screen and (min-width: 431px) and (max-width: 768px) {
+  .footer {
+    font-size: 26px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .footer {
+    font-size: 30px;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .footer {
+    font-size: 30px;
+  }
 }
 
 body {

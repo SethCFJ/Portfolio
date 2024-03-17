@@ -1,6 +1,20 @@
 @use "./partials/variables" as v;
+@use "./partials/queries";
 i:hover {
   text-decoration: none;
+}
+a {
+  align-self: center;
+  margin-right: 3px;
+  @include queries.small-tablet {
+    font-size: 2em;
+  }
+  @include queries.tablet {
+    font-size: 2.5em;
+  }
+  @include queries.laptop {
+    font-size: 3em;
+  }
 }
 .gallery {
   width: 80%;
@@ -11,32 +25,78 @@ i:hover {
   border: 3px solid black;
   border-radius: 10px;
   margin-top: 7vh;
-  padding: 2vh;
+
   gap: 5px;
   box-shadow: 3px 3px 5px #8d8d92ff;
-
+  @include queries.tablet {
+    margin-top: 3vh;
+    margin-bottom: 4vh;
+  }
   &_heading {
     font-family: v.$customFont;
   }
   &_img {
     height: 100%;
     width: 100%;
-    align-self: flex-start;
 
     object-fit: contain;
 
     &_container {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-      width: 25%;
+      justify-self: left;
+      align-self: center;
+      height: 90%;
+      width: 50%;
+      margin-left: 3px;
+      @include queries.small-tablet {
+        width: 45%;
+      }
+      @include queries.tablet {
+        width: 40%;
+      }
+      @include queries.laptop {
+        width: 35%;
+      }
     }
   }
   &_text {
+    display: flex;
+    flex-direction: column;
+    height: 95%;
+    width: 75%;
+    justify-content: center;
+    align-items: center;
+
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-    align-self: flex-end;
-    justify-self: flex-end;
+
+    gap: 0;
+    &_header {
+      font-size: 1em;
+      margin: 0;
+      font-size: 20px;
+      text-align: center;
+      @include queries.small-tablet {
+        font-size: 1.5em;
+      }
+      @include queries.tablet {
+        font-size: 1.75em;
+      }
+      @include queries.laptop {
+        font-size: 2.25em;
+      }
+    }
+    &_desc {
+      font-size: 0;
+      @include queries.small-tablet {
+        font-size: 0.75em;
+      }
+      @include queries.tablet {
+        font-size: 1em;
+      }
+      @include queries.laptop {
+        font-size: 1.5em;
+      }
+    }
   }
 
   &--border {

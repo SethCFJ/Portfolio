@@ -3,7 +3,7 @@
 @use "./gallery.scss";
 @use "./footer.scss";
 @use "./partials/mixins.scss";
-
+@use "./partials/queries";
 body {
   margin: 0;
   width: 100%;
