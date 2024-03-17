@@ -268,12 +268,12 @@ a {
 }
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
   .sections_container_img {
-    width: 50%;
+    width: 30%;
   }
 }
 @media only screen and (min-width: 1025px) {
   .sections_container_img {
-    width: 40%;
+    width: 25%;
     margin-top: 30px;
   }
 }
